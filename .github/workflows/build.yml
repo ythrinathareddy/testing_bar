@@ -44,5 +44,8 @@ jobs:
       # You may pin to the exact commit or the version.
       # uses: SonarSource/sonarqube-quality-gate-action@d304d050d930b02a896b0f85935344f023928496
         uses: SonarSource/sonarqube-quality-gate-action@v1.1.0
-
+        with:
+            scanMetadataReportFile: target/sonar/report-task.txt
+      - name: "Example show SonarQube Quality Gate Status value"
+        run: echo "The Quality Gate status is ${{ steps.sonarqube-quality-gate-check.outputs.quality-gate-status }}"
           
