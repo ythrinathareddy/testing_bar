@@ -37,3 +37,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=mytestapp001_mytestapp001
+      - name: SonarQube Quality Gate Check
+      # You may pin to the exact commit or the version.
+      # uses: SonarSource/sonarqube-quality-gate-action@d304d050d930b02a896b0f85935344f023928496
+        uses: SonarSource/sonarqube-quality-gate-action@v1.1.0
+        with:
+        # Location of the scanner metadata report file
+          scanMetadataReportFile: report-task.txt
+          
