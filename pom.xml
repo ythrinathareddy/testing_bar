@@ -2,17 +2,24 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	
 	<groupId>org.springframework</groupId>
-	<artifactId>gs-maven</artifactId>
+	<artifactId>sample</artifactId>
 	<packaging>jar</packaging>
-	<version>0.1.0</version>
-
+	<version>0.1.5</version>
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
+		<sonar.organization>mytestapp001</sonar.organization>
+  		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+		<sonar.projectKey>mytestapp001_mytestapp003</sonar.projectKey>
 	</properties>
-
+<distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub Packages</name>
+      <url>https://maven.pkg.github.com/balaavekshaa/testing</url>
+    </repository>
+</distributionManagement>
 	<dependencies>
 		<!-- tag::joda[] -->
 		<dependency>
@@ -29,10 +36,18 @@
 			<scope>test</scope>
 		</dependency>
 		<!-- end::junit[] -->
+	
+<dependency>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-deploy-plugin</artifactId>
+    <version>3.1.1</version>
+</dependency>
+
 	</dependencies>
 
 	<build>
 		<plugins>
+			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-shade-plugin</artifactId>
@@ -57,3 +72,4 @@
 	</build>
 
 </project>
+
