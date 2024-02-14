@@ -1,0 +1,21 @@
+name: CD Pipeline
+
+on:
+  workflow_run:
+    workflows: ["CI_BAR"]
+    types:
+      - completed
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+
+    steps:
+      - name: Download artifact from CI
+        uses: actions/download-artifact@v2
+        with:
+          name: my-artifact
+          path: path/to/download
+
+      # Add deployment steps using the downloaded artifact
