@@ -41,8 +41,6 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
       
-
-      - name: Publish to GitHub Packages Apache Maven
-        run: mvn org.apache.maven.plugins:maven-deploy-plugin:3.0.0-M1:deploy-file -Dfile=jplugin2.jar -Dtypes=jar -DgroupId=com.ibm.server -DartifactId=jplugin2  -Dversion=12.0.8.0 -Dpackaging=jar -Durl=https://maven.pkg.github.com/balaavekshaa/testing -DrepositoryId=github
-        env:
-          GITHUB_TOKEN: ${{ secrets.TESTSECRET }}
+        
+      - name: Publish to IntegrationAPI
+        run:  mvn -X org.apache.maven.plugins:maven-deploy-plugin:3.0.0-M1:deploy-file -Dfile=lib/IntegrationAPI.jar  -DskipTests -Dmaven.install.skip=true  -DgroupId=com.ibm.common -DartifactId=integrationapi -Dversion=12.0.8.0 -Dpackaging=jar -Durl=https://maven.pkg.github.com/balaavekshaa/testing -DrepositoryId=github
