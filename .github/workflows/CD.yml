@@ -16,6 +16,6 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: my-artifact
-          path: path/to/download
+          path: download
 
       # Add deployment steps using the downloaded artifact
