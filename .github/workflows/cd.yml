@@ -26,6 +26,6 @@ jobs:
 
       # Download the artifact from GitHub Package Registry
       - name: Download artifact
-        run: mvn -q dependency:get -Dartifact=${{ github.event.workflow_run.head_repository.owner }}:${{ github.event.workflow_run.head_repository.name }}:${{ github.event.workflow_run.head_commit.message }}
+        run: mvn -q dependency:get -Dartifact=com.example:mybar:latest
         
       # Add deployment steps using the downloaded artifact
