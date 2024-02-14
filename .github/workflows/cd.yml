@@ -21,8 +21,8 @@ jobs:
           settings-path: ${{ github.workspace }} # location for the settings.xml file
 
       # Authenticate with GitHub Package Registry
-      - name: Authenticate with GPR
-        run: echo "//mvn.pkg.github.com/${{ github.repository.owner }}/:_authToken=${{ secrets.TESTSECRET }}" > ~/.m2/settings.xml
+      #- name: Authenticate with GPR
+      #  run: echo "//mvn.pkg.github.com/${{ github.repository.owner }}/:_authToken=${{ secrets.TESTSECRET }}" > ~/.m2/settings.xml
 
       # Download the artifact from GitHub Package Registry
       - name: Download artifact
