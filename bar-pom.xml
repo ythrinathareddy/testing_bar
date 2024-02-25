@@ -5,6 +5,7 @@
     <groupId>com.example</groupId>
     <artifactId>mybar</artifactId>
     <version>0.1.4</version>
+
     <packaging>pom</packaging>
    <profiles>
     <profile>
