@@ -38,4 +38,4 @@ jobs:
           mvn org.apache.maven.plugins:maven-deploy-plugin:3.0.0-M1:deploy-file -Dfile=jplugin2.jar  -DgroupId=com.ibm.server -DartifactId=jplugin2  -Dversion=12.0.8.0 -Dpackaging=jar -Durl=https://maven.pkg.github.com/ythrinathareddy/testing_bar -DrepositoryId=github
           
         env:
-          GITHUB_TOKEN: ${{ secrets.TEST }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
