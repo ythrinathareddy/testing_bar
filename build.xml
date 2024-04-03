@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="run_mqsipackagebar" name="sample">
+	<target name="run_mqsipackagebar" description="--> runs mqsipackagebar from an ant task">
+	   <java classname="com.ibm.broker.config.appdev.FlowRendererBAR"
+		  failonerror="true"
+		  fork="true">
+			 <arg line="-a target/mybar-0.1.2.bar"/>
+			 <arg line="-k TestAPP2"/>
+			 
+			 <classpath>
+			 
+				<fileset dir="lib" includes="IntegrationAPI.jar" /> 
+				<fileset dir="lib" includes="javacompute.jar,jplugin2.jar" /> 
+			 </classpath>
+	   </java>
+	</target>
+</project>
