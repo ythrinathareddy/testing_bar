@@ -17,7 +17,7 @@
     <repository>
      <id>github</id>
     <name>GitHub Packages</name>
-    <url>https://maven.pkg.github.com/laxmiganapathi/barexample</url>
+    <url>https://maven.pkg.github.com/ythrinathareddy/testing_bar</url>
     </repository>
 </distributionManagement>
 	<dependencies>
