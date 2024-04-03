@@ -27,7 +27,7 @@
 	<repositories>
         <repository>
             <id>github</id>
-            <url>https://maven.pkg.github.com/laxmiganapathi/barexample</url>
+            <url>https://maven.pkg.github.com/ythrinathareddy/testing_bar</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
@@ -121,7 +121,7 @@
         <repository>
             <id>github</id>
             <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/laxmiganapathi/barexample</url>
+            <url>https://maven.pkg.github.com/ythrinathareddy/testing_bar</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
@@ -131,7 +131,7 @@
     <pluginRepository>
            <id>github</id>
             <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/laxmiganapathi/barexample</url>
+            <url>https://maven.pkg.github.com/ythrinathareddy/testing_bar</url>
     </pluginRepository>
 </pluginRepositories>
 </project>
